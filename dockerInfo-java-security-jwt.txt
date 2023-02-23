@@ -1,0 +1,16 @@
+NOTES:  These instructins are based in the spring-security-jwt project
+
+1.  Create Docker Contianer
+mvn spring-boot:build-image
+
+2.  Tag docker container (Add repo tag for Docker Humb (e.g. jeffyoung20))
+docker tag spring-security-jwt:0.0.1-SNAPSHOT jeffyoung20/spring-security-jwt:0.0.1-SNAPSHOT
+
+3.  Push to Docker Hub
+docker push jeffyoung20/spring-security-jwt:0.0.1-SNAPSHOT
+
+4.  Pull from Docker Hub
+docker pull jeffyoung20/spring-security-jwt:0.0.1-SNAPSHOT
+
+5.  Run
+docker run --name=spring-security-jwt -p 8080:8080 -e SERVER_PORT=8080 -d jeffyoung20/spring-security-jwt:0.0.1-SNAPSHOT
