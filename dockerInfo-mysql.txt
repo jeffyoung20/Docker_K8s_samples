@@ -1,0 +1,2 @@
+# Set up Mysql database with a volume
+docker run --name=mysql-test-1 -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password -v mysql:/var/lib/mysql -d mysql
